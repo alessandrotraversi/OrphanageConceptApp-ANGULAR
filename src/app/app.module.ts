@@ -8,6 +8,9 @@ import { OrphanageComponent } from './views/orphanage/orphanage.component';
 import { OrphanageCreateComponent } from './views/orphanage-create/orphanage-create.component';
 import { OrphanageMapComponent } from './views/orphanage-map/orphanage-map.component';
 
+// Fontawesome docs for angular apps https://www.npmjs.com/package/@fortawesome/angular-fontawesome
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,8 @@ import { OrphanageMapComponent } from './views/orphanage-map/orphanage-map.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

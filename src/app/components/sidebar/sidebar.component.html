@@ -1,1 +1,19 @@
-<p>sidebar works!</p>
+<aside
+  aria-label="main-sidebar"
+  *ngClass="{sizeClass === 'bigger' ? 'bigger' : 'smaller app-sidebar'}"
+> 
+  <!-- [domClass]="'video-or-pic'"-->
+  <header>
+    <img src="../../assets/images/map-marker.svg" alt="Happy" />
+    <ng-content select="header" *ngIf="sizeClass === 'bigger'"></ng-content>
+  </header>
+
+  <footer>
+    <span *ngIf="sizeClass === 'bigger'">
+      <ng-content select="footer"></ng-content>
+    </span>
+    <button v-else type="button" v-on:click="goBack" aria-label="main-sidebar-btn">
+      <fa-icon [icon]="faArrowLeft" style="color: #fff; font-size:24px"></fa-icon>
+    </button>        
+  </footer>
+</aside>
